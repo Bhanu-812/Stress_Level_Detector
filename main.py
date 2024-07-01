@@ -20,7 +20,7 @@ st.set_page_config(
 # Dictionary for pages
 Tabs = {
     "Home": home,
-    "Data Info": data,
+    # "Data Info": data,
     "Prediction": predict,
     "Visualisation": visualise
     
@@ -39,7 +39,7 @@ df, X, y = load_data()
 # Call the app funciton of selected page to run
 if page in ["Prediction", "Visualisation"]:
     Tabs[page].app(df, X, y)
-elif (page == "Data Info"):
-    Tabs[page].app(df)
+# elif (page == "Data Info"):
+#     Tabs[page].app(df)
 else:
     Tabs[page].app()
